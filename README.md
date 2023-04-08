@@ -1,1 +1,1 @@
-# Los-Altos-Hacks-Porject
+# Los-Altos-Hacks-Project
