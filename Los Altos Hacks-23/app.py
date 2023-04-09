@@ -23,9 +23,15 @@ def video_feed():
 
 @app.route('/updated' , methods=['POST', 'GET'])
 def updated():
-      output = request.form.to_dict()
-      age = output["age"]
-      return render_template('index.html')
+      if request.method == 'POST':
+         president = request.form["president"]
+         print(president)
+         if(president == "Joe Biden"):
+            return render_template('index2.html')
+         else:
+            return render_template('index3.html')
+      else:
+          return render_template('index.html')
 
 def runCamera():
    cap = cv2.VideoCapture(0)
